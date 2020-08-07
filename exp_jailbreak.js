@@ -26406,10 +26406,10 @@ var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 
 if (main_ret == 179 || main_ret == 0) {
-window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔</h1>";
+window.msgs.innerHTML="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔</h1>";
 
 if (ExploitMira != null){
-  window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔ Now Loading Mira ...</h1>";
+  window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'><font color=\"blue\">Exploit ✔ </font><font color=\"red\">Mira ... </font></h1>";
     setTimeout(function(){
     var script = document.createElement('script');script.src = MiraSRC;document.getElementsByTagName('head')[0].appendChild(script);
     var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -26417,6 +26417,6 @@ if (ExploitMira != null){
   }
 } 
 else {
-  window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Jailbreak failed! - Reboot your PS4 and try again.</h1>";
+  window.msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Jailbreak FALHOU! - Reinicie o seu PS4 e tente novamente.</h1>";
 }
 }
