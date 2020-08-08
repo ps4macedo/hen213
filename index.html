@@ -65,7 +65,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Ins
 <button class="button"  onclick="load_dbBackup(); return false"> <font size="4">DB Backup </font></button>
 <button class="button"  onclick="load_dbRestore(); return false"> <font size="4">DB Restore </font></button>
 <br><br>
-<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>Clique aqui para enviar a temperatura desejada para o PS4 <br> <font size=1px>(Temperatura Padrão é <font color="red">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:48px"></select><font size=5px>&#176;C</font>
+<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>Clique aqui para enviar a temperatura alvo para o PS4 <br> <font size=1px>(Temperatura Padrão é <font color="red">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px"></select><font size=5px>&#176;C</font>
 <script>
 for(var i=35; i<=80; i++){
     var select = document.getElementById("tempC");
