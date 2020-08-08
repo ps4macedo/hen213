@@ -96,6 +96,14 @@ LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ 
 setTimeout(jailbreak,500);
 }
 
+function load_HEN(){
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>HEN ...</h1>";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>HEN ✔</h1>";
+var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
 function load_exploit_mira(){
 msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
 LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ Mira ✔</h1>";ExploitMira="yes";MiraSRC="pl_mira.js";
