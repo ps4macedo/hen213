@@ -1,6 +1,6 @@
 <html manifest="cache.manifest">
 <head>
-<title>Exploit 6.72 v5</title>
+<title>Exploit 6.72 v5 agora com HEN</title>
 <style>
 .button:focus, .button::-moz-focus-inner{
   outline:none;
@@ -38,6 +38,7 @@
 <br>
 <h1 style='font-size:25px;text-align:center;'><u><b>EXPLOIT</b></u></h1>
 <div style="text-align:center">
+<button class="button" onclick="load_exploit_HEN(); return false"><font size="4"> Exploit + HEN </font></button>
 <button class="button" onclick="load_exploit_mira(); return false"><font size="4">Exploit + Mira </font></button>
 <button class="button" onclick="load_exploit_miraUnoff(); return false"><font size="4">Exp+M/n oficial </font></button></div>
 <br>
@@ -48,7 +49,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Ins
 </script>
 <script src="exp_common.js"></script>
 <script src="exp_jailbreak.js"></script>
-<h1 id=msgs style='font-size:25px;text-align:center;'>JAILBREAK 6.72 <font color="red">v5</font></h1>
+<h1 id=msgs style='font-size:25px;text-align:center;'>JAILBREAK 6.72 <font color="red">v5 agora com HEN</font></h1>
 <hr><br>
 <div style="text-align:center">
 <h1 style='font-size:25px;text-align:center;'><u><b>CARGAS ÚTEIS</b></u></h1>
@@ -86,6 +87,12 @@ tempC.value=65;
 <script>
 function load_exploit(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_HEN(){
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... HEN ...</h1>";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔</h1>";ExploitMira="HEN";MiraSRC="pl_HEN.js";
 setTimeout(jailbreak,500);
 }
 
