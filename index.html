@@ -45,7 +45,7 @@
 <hr>
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"red\">" + Percent + "%</font>";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Instalação na Cache Concluída!";},1000);setTimeout(function(){window.msgs.innerHTML="Agora desabilite a rede do PS4 e retorne ao navegador.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"blue\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora <font color=\"red\">desabilite a rede do PS4</font> e retorne ao navegador.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
 <script src="exp_common.js"></script>
 <script src="exp_jailbreak.js"></script>
 </head>
@@ -101,14 +101,14 @@ setTimeout(jailbreak,500);
 }
 
 function load_exploit_mira(){
-msgs.innerHTML="<h1 style='<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
 LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ Mira ✔</h1>";ExploitMira="yes";MiraSRC="pl_mira.js";
 setTimeout(jailbreak,500);
 }
 
 function load_exploit_miraUnoff(){
-msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
-LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ Mira ✔</h1>";ExploitMira="yes";MiraSRC="pl_mira_unofficial.js";
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira nOf...</h1>";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ Mira nOf✔</h1>";ExploitMira="yes";MiraSRC="pl_mira_unofficial.js";
 setTimeout(jailbreak,500);
 }
 
@@ -224,8 +224,8 @@ var script = document.createElement('script');script.src = "exp_loader.js";docum
 }
 
 function load_fanthresh(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Fan Threshold ...</h1>";
-LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;//alert(fanTemp);
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Enviando temperatura alvo...</h1>";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Temperatura alvo enviada✔</h1>";fanTemp=tempC.value;//alert(fanTemp);
 var script = document.createElement('script');script.src = "pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
