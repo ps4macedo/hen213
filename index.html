@@ -44,11 +44,12 @@
 <br>
 <hr>
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"red\">" + Percent + "%</font>";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Instalação na Cache Concluída!";},1000);setTimeout(function(){window.msgs.innerHTML="Agora desabilite a rede do PS4 e retorne ao navegador.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <script src="exp_common.js"></script>
 <script src="exp_jailbreak.js"></script>
+</head>
 <h1 id=msgs style='font-size:25px;text-align:center;'>JAILBREAK 6.72 <font color="red">v5 agora com HEN</font></h1>
 <hr><br>
 <div style="text-align:center">
@@ -84,6 +85,9 @@ tempC.value=65;
 <br>
 <div align="right"><font size="3" color="#404040" face="Verdana, Geneva, sans-serif"><b>FAMACEDO</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div></font>
 </div>
+</script>
+<br>
+</div>
 <script>
 function load_exploit(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
@@ -92,20 +96,13 @@ setTimeout(jailbreak,500);
 
 function load_exploit_HEN(){
 msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... HEN ...</h1>";
-LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔</h1>";ExploitMira="HEN";MiraSRC="pl_HEN.js";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔</h1>";
+ExploitMira="HEN";MiraSRC="pl_HEN.js";
 setTimeout(jailbreak,500);
 }
 
-function load_HEN(){
-msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>HEN ...</h1>";
-LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>HEN ✔</h1>";
-var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-
 function load_exploit_mira(){
-msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
+msgs.innerHTML="<h1 style='<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... Mira ...</h1>";
 LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ Mira ✔</h1>";ExploitMira="yes";MiraSRC="pl_mira.js";
 setTimeout(jailbreak,500);
 }
@@ -122,10 +119,24 @@ LoadedMSG="Send Payload To Port 9021";
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 
+function load_HEN(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN ...</h1>";
+LoadedMSG="HEN Loaded ✔";
+var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
 function load_mira(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
 LoadedMSG="Mira Loaded ✔";
 var script = document.createElement('script');script.src = "pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_mira_unofficial(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
+LoadedMSG="Mira Loaded ✔";
+var script = document.createElement('script');script.src = "pl_mira_unofficial.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 
@@ -214,12 +225,11 @@ var script = document.createElement('script');script.src = "exp_loader.js";docum
 }
 
 function load_fanthresh(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Ajustando a temperatura do console...</h1>";
-LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Temperatura do console ajustada ✔</h1> ";fanTemp=tempC.value;//alert(fanTemp);
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Fan Threshold ...</h1>";
+LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;//alert(fanTemp);
 var script = document.createElement('script');script.src = "pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
-
 </script>
 </body>
 </html>
