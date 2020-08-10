@@ -26411,7 +26411,7 @@ window.msgs.innerHTML="<h1 style='color:blue;font-size:25px;text-align:center;'>
 if (ExploitMira != null){
 	if (ExploitMira == "HEN"){window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'><font color=\"blue\">Exploit ✔ </font><font color=\"red\">HEN ... </font></h1>";}
 	else {
-	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔ Now Loading Mira ...</h1>";}
+	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'><font color=\"blue\">Exploit ✔ </font><font color=\"red\">Mira ... </font></h1>";}
     setTimeout(function(){
     var script = document.createElement('script');script.src = MiraSRC;document.getElementsByTagName('head')[0].appendChild(script);
     var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
