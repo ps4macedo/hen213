@@ -41,8 +41,8 @@
 <div style="text-align:center">
 <button class="button" onclick="load_exploit_mira(); return false"><font size="4">Mira Oficial</font></button>
 <button class="button" onclick="load_exploit_miraUnoff(); return false"><font size="4">Mira sem HD </font></button>
-<button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3 </font></button></div>
-<button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.4 </font></button></div>
+<button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3 </font></button>
+<button class="button" onclick="load_exploit_HEN2(); return false"><font size="4">HEN 2.1.5 </font></button></div>
 <br>
 <hr>
 <script>
@@ -92,6 +92,13 @@ tempC.value=68;
 <script>
 function load_exploit(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit ...</h1>";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_HEN2(){
+msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... HEN ...</h1>";
+LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔</h1>";
+ExploitMira="HEN";MiraSRC="pl_HEN2.js";
 setTimeout(jailbreak,500);
 }
 
