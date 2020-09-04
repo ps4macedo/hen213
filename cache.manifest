@@ -3,9 +3,7 @@ CACHE MANIFEST
 index.html
 hen.html
 exp_webkit.js
-exp_kernel.js
 exp_kernelHEN.js
-exp_loaderHEN.js
 exp_loader.js
 exp_BinLoader.js
 pl_updatesDisable.js
