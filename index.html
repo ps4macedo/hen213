@@ -32,11 +32,15 @@
   top:5px;
   box-shadow:none;
 </style>
-<body>
+<body onload="pegarCheck()">
 <br>
 <h1 style='font-size:25px;text-align:center;'><u><b>Jailbreak + HEN v2.1.3b</b></u>
 <br>
-<font size="3">Para <font color="red"><b>DESBLOQUEIO AUTOMÁTICO</b></font> ao entrar no navegado WWW, clique <a href="hen.html"><font size="5"><u>aqui</u></font></a></font>
+<font size="3">Para <font color="red"><b>DESBLOQUEIO AUTOMÁTICO</b></font> ao entrar no navegado WWW, marque
+<font color="red" size="5"><b>aqui</b></font>
+	<input type="checkbox" id="auto" onclick="check()">
+</font>
+
 </h1>
 <div style="text-align:center">
 <button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3b</font></button>
@@ -48,10 +52,11 @@
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"red\">" + Percent + "%</font>";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"blue\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"red\">CIRCULO, DESABILITE a rede e REINICIE O PS4</font>.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
-<script src="exp_webkit.js"></script>
+<script src="exp_webkit.js">
+</script>
 </head>
 <body>
-<h1 id=msgs style='font-size:25px;text-align:center;color:blue;'><font color="red">Desconecte todos os USBs antes do Jailbreak, depois pode conectar novamente.</font></h1>
+<h1 id=msgs style='font-size:25px;text-align:center;color:blue;'><font color="red">Desconecte todos os USBs</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
 <hr>
 <div style="text-align:center">
 <font size="3">Pressione o <font color="red"><b>CIRCULO PARA SAIR<b></font>.</font>
@@ -91,7 +96,21 @@ tempC.value=70;
 <br>
 <div align="right"><font size="3" color="#404040" face="Verdana, Geneva, sans-serif"><b>FAMACEDO</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div></font>
 </div>
+
 <script>
+function check() {
+var checkStatus = document.getElementById("auto").checked;
+document.getElementById("auto").checked = checkStatus;
+localStorage.setItem('auto', checkStatus);
+}
+
+var checkStatusStorage = localStorage.getItem("auto");
+	
+function pegarCheck(){
+if (checkStatusStorage == 'true'){document.getElementById("auto").checked = true ; load_exploit_HEN(); return false;}
+else{document.getElementById("auto").checked = false ;}	
+}
+	
 if (localStorage.passcount == null) localStorage.passcount=0;
 window.passCounter.innerHTML=localStorage.passcount;
 if (localStorage.failcount == null) localStorage.failcount=0;
