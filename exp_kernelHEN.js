@@ -33775,6 +33775,6 @@ if (main_ret == 179 || main_ret == 0) {
 } 
 else {
 	localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-	window.msgs.innerHTML="<h1 style='color:#ee596f;font-size:25px;text-align:center;'>Jailbreak FALHOU! - Pressione o \"PS\" e reinicie o seu PS4 novamente.</h1>";
+	window.msgs.innerHTML="<h1 style='color:#ee596f;font-size:25px;text-align:center;'>Jailbreak FALHOU! - Pressione o \"CIRCULO\" e reinicie o seu PS4 pelas opções de energia do console.</h1>";
 }
 }
