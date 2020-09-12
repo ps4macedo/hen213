@@ -42,6 +42,7 @@ background-repeat:no-repeat;
   top:5px;
   box-shadow:none;
  }
+
 </style>
 <body onload="pegarCheck()">
 <br>
@@ -53,7 +54,8 @@ background-repeat:no-repeat;
 </font>
 </h1>
 <div style="text-align:center">
-<button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3b</font></button>
+<button id="hen" class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3b</font></button>
+<h1 id=msgAuto style='font-size:30px;text-align:center;color:blue;'>Auto HEN 2.1.3b <font color="red">ATIVADO</font></h1>
 </div>
 <br>
 <div style="text-align:center"><font size="3" color="blue"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="red"><b><span id=failCounter></span></b> Falha(s)</font></div>
@@ -108,6 +110,8 @@ tempC.value=70;
 </div>
 
 <script>
+
+	
 function check() {
 var checkStatus = document.getElementById("auto").checked;
 document.getElementById("auto").checked = checkStatus;
@@ -119,9 +123,9 @@ var checkStatusStorage = localStorage.getItem("auto");
 function contar(){
 var tempo = 30;
 var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "Na tentativa de evitar falha, o Exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos";
+  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"red\">evitar falha,</font> o Exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos.";
   tempo -= 1;
-  if(tempo <= 0){
+  if(tempo <= -1){
     clearInterval(downloadTimer);
 	load_exploit_HEN(); return false;
   }
@@ -129,8 +133,15 @@ var downloadTimer = setInterval(function(){
 }
 	
 function pegarCheck(){
-if (checkStatusStorage == 'true'){document.getElementById("auto").checked = true ; contar(); return false;}
-else{document.getElementById("auto").checked = false ;}
+if (checkStatusStorage == 'true'){
+document.getElementById("auto").checked = true ; 
+document.getElementById('hen').style.display = 'none';
+document.getElementById('msgAuto').style.display = 'inline';
+contar(); return false;}
+else{
+document.getElementById("auto").checked = false ;
+document.getElementById('hen').style.display = 'inline';
+document.getElementById('msgAuto').style.display = 'none';}
 }
 	
 if (localStorage.passcount == null) localStorage.passcount=0;
