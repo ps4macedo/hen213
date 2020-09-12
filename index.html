@@ -46,9 +46,9 @@ background-repeat:no-repeat;
 </style>
 <body onload="pegarCheck()">
 <br>
-<h1 style='font-size:25px;text-align:center;'><u><b>Jailbreak + HEN v2.1.3b</b></u>
+<h1 style='font-size:25px;text-align:center;'><u><b>EXPLOIT 6.72 V8</b></u>
 <br>
-<font size="3">Para <font color="red"><b>DESBLOQUEIO AUTOMÁTICO</b></font> ao entrar no navegado WWW, marque
+<font size="3">Para <font color="red"><b>AUTO HEN</b></font> ao entrar no navegador, marque
 <font color="red" size="5"><b>aqui</b></font>
 	<input type="checkbox" id="auto" onclick="check()">
 </font>
@@ -60,7 +60,7 @@ background-repeat:no-repeat;
 <br>
 <div style="text-align:center"><font size="3" color="blue"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="red"><b><span id=failCounter></span></b> Falha(s)</font></div>
 </h1>
-<hr>
+<hr width="35%">
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"red\">" + Percent + "%</font>";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"blue\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"red\">CIRCULO, DESABILITE a rede e REINICIE O PS4</font>.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
@@ -68,7 +68,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 </script>
 </head>
 <h1 id=msgs style='font-size:25px;text-align:center;color:blue;'><font color="red">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
-<hr>
+<hr width="35%">
 <div style="text-align:center">
 <font size="3">Pressione o <font color="red"><b>CIRCULO PARA SAIR<b></font>.</font>
 </div>
@@ -116,6 +116,11 @@ function check() {
 var checkStatus = document.getElementById("auto").checked;
 document.getElementById("auto").checked = checkStatus;
 localStorage.setItem('auto', checkStatus);
+
+if(checkStatus){
+document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"red\">ATIVADO.</font> O desbloqueio será <font color=\"red\">AUTOMÁTICO</font> na próxima vez que entrar no navegador.";}
+else{
+document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"red\">DESATIVADO.</font> O desbloqueio será <font color=\"red\">MANUAL</font> na próxima vez que entrar no navegador.";}
 }
 
 var checkStatusStorage = localStorage.getItem("auto");
@@ -123,7 +128,7 @@ var checkStatusStorage = localStorage.getItem("auto");
 function contar(){
 var tempo = 30;
 var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"red\">evitar falha,</font> o Exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos.";
+  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"red\">evitar falha,</font> o exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos.";
   tempo -= 1;
   if(tempo <= -1){
     clearInterval(downloadTimer);
