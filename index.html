@@ -51,7 +51,6 @@ background-repeat:no-repeat;
 <font color="red" size="5"><b>aqui</b></font>
 	<input type="checkbox" id="auto" onclick="check()">
 </font>
-
 </h1>
 <div style="text-align:center">
 <button class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3b</font></button>
@@ -66,7 +65,6 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <script src="exp_webkit.js">
 </script>
 </head>
-<body>
 <h1 id=msgs style='font-size:25px;text-align:center;color:blue;'><font color="red">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
 <hr>
 <div style="text-align:center">
@@ -117,10 +115,22 @@ localStorage.setItem('auto', checkStatus);
 }
 
 var checkStatusStorage = localStorage.getItem("auto");
+
+function contar(){
+var tempo = 30;
+var downloadTimer = setInterval(function(){
+  document.getElementById("msgs").innerHTML = "Na tentativa de evitar falha, o Exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos";
+  tempo -= 1;
+  if(tempo <= 0){
+    clearInterval(downloadTimer);
+	load_exploit_HEN(); return false;
+  }
+}, 1000);
+}
 	
 function pegarCheck(){
-if (checkStatusStorage == 'true'){document.getElementById("auto").checked = true ; load_exploit_HEN(); return false;}
-else{document.getElementById("auto").checked = false ;}	
+if (checkStatusStorage == 'true'){document.getElementById("auto").checked = true ; contar(); return false;}
+else{document.getElementById("auto").checked = false ;}
 }
 	
 if (localStorage.passcount == null) localStorage.passcount=0;
