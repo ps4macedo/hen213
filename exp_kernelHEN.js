@@ -33768,13 +33768,13 @@ var _ = malloc_nogc.pop();
 
 if (main_ret == 179 || main_ret == 0) {
 	localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
-	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'><font color=\"blue\">Exploit ✔ </font><font color=\"red\">HEN ... </font></h1>";
+	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'><font color=\"#6089f6\">Exploit ✔ </font><font color=\"#ee596f\">HEN ... </font></h1>";
     setTimeout(function(){
     plLoader();
     },1000);
 } 
 else {
 	localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-	window.msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Jailbreak FALHOU! - Pressione o \"PS\" e reinicie o seu PS4 novamente.</h1>";
+	window.msgs.innerHTML="<h1 style='color:#ee596f;font-size:25px;text-align:center;'>Jailbreak FALHOU! - Pressione o \"PS\" e reinicie o seu PS4 novamente.</h1>";
 }
 }

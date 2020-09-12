@@ -36,7 +36,7 @@ background-repeat:no-repeat;
   color:white;
 }
 .button:active{
-  background:red;
+  background:#ee596f;
   position:relative;
   color:black;
   top:5px;
@@ -45,33 +45,34 @@ background-repeat:no-repeat;
 
 </style>
 <body onload="pegarCheck()">
-<br>
+<br><br>
 <h1 style='font-size:25px;text-align:center;'><u><b>EXPLOIT 6.72 V8</b></u>
 <br>
-<font size="3">Para <font color="red"><b>AUTO HEN</b></font> ao entrar no navegador, marque
-<font color="red" size="5"><b>aqui</b></font>
+<font size="3">Para <font color="#ee596f"><b>AUTO HEN</b></font> ao entrar no navegador, marque
+<font color="#ee596f" size="5"><b>aqui</b></font>
 	<input type="checkbox" id="auto" onclick="check()">
 </font>
 </h1>
 <div style="text-align:center">
 <button id="hen" class="button" onclick="load_exploit_HEN(); return false"><font size="4">HEN 2.1.3b</font></button>
-<h1 id=msgAuto style='font-size:30px;text-align:center;color:blue;'>Auto HEN 2.1.3b <font color="red">ATIVADO</font></h1>
+<h1 id=msgAuto style='font-size:30px;text-align:center;color:#6089f6;'>Auto HEN 2.1.3b <font color="#ee596f">ATIVADO</font></h1>
 </div>
 <br>
-<div style="text-align:center"><font size="3" color="blue"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="red"><b><span id=failCounter></span></b> Falha(s)</font></div>
+<div style="text-align:center"><font size="3" color="#6089f6"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="#ee596f"><b><span id=failCounter></span></b> Falha(s)</font></div>
 </h1>
 <hr width="35%">
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"red\">" + Percent + "%</font>";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"blue\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"red\">CIRCULO, DESABILITE a rede e REINICIE O PS4</font>.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"#ee596f\">" + Percent + "%</font>";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"#6089f6\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"#ee596f\">CIRCULO, DESABILITE a #ee596fe e REINICIE O PS4</font>.";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
 <script src="exp_webkit.js">
 </script>
 </head>
-<h1 id=msgs style='font-size:25px;text-align:center;color:blue;'><font color="red">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
+<h1 id=msgs style='font-size:25px;text-align:center;color:#6089f6;'><font color="#ee596f">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
 <hr width="35%">
 <div style="text-align:center">
-<font size="3">Pressione o <font color="red"><b>CIRCULO PARA SAIR<b></font>.</font>
+<font size="3">Pressione o <font color="#ee596f"><b>CIRCULO PARA SAIR<b></font>.</font>
 </div>
+<br>
 <div style="text-align:center">
 <h1 style='font-size:25px;text-align:center;'><u><b>CARGAS ÚTEIS</b></u></h1>
 <button class="button"  onclick="load_binloader(); return false"> Bin Loader </button>
@@ -91,7 +92,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button"  onclick="load_dbBackup(); return false"> DB Backup </button>
 <button class="button"  onclick="load_dbRestore(); return false"> DB Restore </button>
 <br><br><br>
-<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>temperatura alvo<br> <font size=1px>(Padrão é <font color="red">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px"></select><font size=5px>&#176;C</font>
+<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>temperatura alvo<br> <font size=1px>(Padrão é <font color="#ee596f">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px"></select><font size=5px>&#176;C</font>
 <script>
 for(var i=35; i<=80; i++){
     var select = document.getElementById("tempC");
@@ -118,9 +119,9 @@ document.getElementById("auto").checked = checkStatus;
 localStorage.setItem('auto', checkStatus);
 
 if(checkStatus){
-document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"red\">ATIVADO.</font> O desbloqueio será <font color=\"red\">AUTOMÁTICO</font> na próxima vez que entrar no navegador.";}
+document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"#ee596f\">ATIVADO.</font> O desbloqueio será <font color=\"#ee596f\">AUTOMÁTICO</font> na próxima vez que entrar no navegador.";}
 else{
-document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"red\">DESATIVADO.</font> O desbloqueio será <font color=\"red\">MANUAL</font> na próxima vez que entrar no navegador.";}
+document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"#ee596f\">DESATIVADO.</font> O desbloqueio será <font color=\"#ee596f\">MANUAL</font> na próxima vez que entrar no navegador.";}
 }
 
 var checkStatusStorage = localStorage.getItem("auto");
@@ -128,7 +129,7 @@ var checkStatusStorage = localStorage.getItem("auto");
 function contar(){
 var tempo = 30;
 var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"red\">evitar falha,</font> o exploit vai ser executado em <font color=\"red\">" + tempo + "</font> segundos.";
+  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"#ee596f\">evitar falha,</font> o exploit vai ser executado em <font color=\"#ee596f\">" + tempo + "</font> segundos.";
   tempo -= 1;
   if(tempo <= -1){
     clearInterval(downloadTimer);
@@ -155,8 +156,8 @@ if (localStorage.failcount == null) localStorage.failcount=0;
 window.failCounter.innerHTML=localStorage.failcount;
 
 function load_exploit_HEN(){
-msgs.innerHTML="<h1 style='color:red;font-size:25px;text-align:center;'>Exploit ... HEN ...</h1>";
-LoadedMSG="<h1 style='color:blue;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔ </h1>";function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+msgs.innerHTML="<h1 style='color:#ee596f;font-size:25px;text-align:center;'>Exploit ... HEN ...</h1>";
+LoadedMSG="<h1 style='color:#6089f6;font-size:25px;text-align:center;'>Exploit ✔ HEN ✔ </h1>";function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript(){getScript("exp_kernelHEN.js",function(){setTimeout(jailbreak,500);});}loadScript();
 }
 
