@@ -148,9 +148,9 @@ document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"#ee596f\">DE
 var checkStatusStorage = localStorage.getItem("auto");
 
 function contar(){
-var tempo = 30;
+var tempo = 10;
 var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"#ee596f\">evitar falha,</font> o exploit vai ser executado em <font color=\"#ee596f\">" + tempo + "</font> segundos.";
+  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"#ee596f\">evitar KP,</font> o exploit vai ser executado em <font color=\"#ee596f\">" + tempo + "</font> segundos.";
   tempo -= 1;
   if(tempo <= -1){
     clearInterval(downloadTimer);
