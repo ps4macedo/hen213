@@ -49,13 +49,13 @@ background-color: transparent;
 }
 </style>
 <body onload="pegarCheck()">
-<br><br>
-<h1 style='font-size:25px;text-align:center;'><u><b>EXPLOIT 6.72 V8</b></u>
+<br>
+<h1 style='font-size:25px;text-align:center;'><u><font color="#49c179">EXPLOIT 6.72 V8</font></u>
 <br>
 <div class="double">
 <font size="3">Ative ou Desative o <font color="#ee596f"><b>AUTO HEN</b></font> 
 <font color="#ee596f" size="5"><b>aqui</b></font>
-<input type="checkbox" id="auto" onclick="check()"/>
+<input type="checkbox" style="background-color:transparent" id="auto" onclick="check()"/>
 </div>
 	
 </font>
@@ -67,7 +67,7 @@ background-color: transparent;
 <br>
 <div style="text-align:center"><font size="3" color="#6089f6"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="#ee596f"><b><span id=failCounter></span></b> Falha(s)</font></div>
 </h1>
-<hr width="35%">
+<hr width="55%" size="1" color="#ff5757">
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"#ee596f\">" + Percent + "%</font>";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"#6089f6\">Instalação na Cache Concluída!</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"#ee596f\">CIRCULO, DESABILITE a REDE e REINICIE o PS4.</font>";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
@@ -75,13 +75,12 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 </script>
 </head>
 <h1 id=msgs style='font-size:25px;text-align:center;color:#6089f6;'><font color="#ee596f">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
-<hr width="35%">
+<hr width="55%" size="1" color="#ff5757">
 <div style="text-align:center">
 <font size="3">Pressione o <font color="#ee596f"><b>CIRCULO PARA SAIR<b></font>.</font>
 </div>
-<br>
 <div style="text-align:center">
-<h1 style='font-size:25px;text-align:center;'><u><b>CARGAS ÚTEIS</b></u></h1>
+<h1 style='font-size:25px;text-align:center;'><u><font color="#49c179">CARGAS ÚTEIS</font></u></h1>
 <button class="button"  onclick="load_binloader(); return false"> Bin Loader </button>
 <button class="button"  onclick="load_ftp(); return false"> FTP </button>
 <button class="button"  onclick="load_dumper(); return false"> Dumper </button>
@@ -98,8 +97,8 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button"  onclick="load_updatesenable(); return false"> Enable Updates </button>
 <button class="button"  onclick="load_dbBackup(); return false"> DB Backup </button>
 <button class="button"  onclick="load_dbRestore(); return false"> DB Restore </button>
-<br><br><br>
-<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>temperatura alvo<br> <font size=1px>(Padrão é <font color="#ee596f">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px"></select><font size=5px>&#176;C</font>
+<br><br>
+<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>temperatura alvo<br> <font size=1px>(Padrão é <font color="#ee596f">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"></select><font size=5px>&#176;C</font>
 <script>
 for(var i=35; i<=80; i++){
     var select = document.getElementById("tempC");
@@ -110,16 +109,31 @@ for(var i=35; i<=80; i++){
 }
 tempC.value=70;
 </script>
-<br>
+<br><br>
+<h1 style='font-size:25px;'><u><font color="#49c179">Dicas/Informações:</font></u>&nbsp
+<button id="d1" class="button" onclick="dicas('1');">DICA 1</button>
+<button id="d2" class="button" onclick="dicas('2');">DICA 2</button>
+<button id="d3" class="button" onclick="dicas('3');">DICA 3</button>
+<button id="d4" class="button" onclick="dicas('4');">DICA 4</button>
+<button id="d5" class="button" onclick="dicas('5');">DICA 5</button>
+<button id="d6" class="button" onclick="dicas('6');">Informações</button>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
 </div>
-<br>
 <br>
 <div align="right"><font size="3" color="white" face="Verdana, Geneva, sans-serif"><b>FAMACEDO</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div></font>
-</div>
-
 <script>
+function dicas (dica) {
+switch (dica) {
+case '1':document.getElementById("msgs").innerHTML = "Informações da dica 1";break;
+case '2':document.getElementById("msgs").innerHTML = "Informações da dica 2";break;
+case '3':document.getElementById("msgs").innerHTML = "Informações da dica 3";break;
+case '4':document.getElementById("msgs").innerHTML = "Informações da dica 4";break;
+case '5':document.getElementById("msgs").innerHTML = "Informações da dica 5";break;
+case '6':document.getElementById("msgs").innerHTML = "Informações";break;
+default:document.getElementById("msgs").innerHTML = "erro";
+}
+}
 
-	
 function check() {
 var checkStatus = document.getElementById("auto").checked;
 document.getElementById("auto").checked = checkStatus;
