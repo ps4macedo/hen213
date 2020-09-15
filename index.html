@@ -111,7 +111,7 @@ tempC.value=70;
 </script>
 <br><br>
 <h1 style='font-size:25px;'><u><font color="#49c179">Dicas/Informações:</font></u>&nbsp
-<button id="d1" class="button" onclick="dicas('1');">DICA 1</button>
+<button id="d1" class="button" onclick="dicas('1');">CACHE</button>
 <button id="d2" class="button" onclick="dicas('2');">DICA 2</button>
 <button id="d3" class="button" onclick="dicas('3');">DICA 3</button>
 <button id="d4" class="button" onclick="dicas('4');">DICA 4</button>
@@ -124,7 +124,8 @@ tempC.value=70;
 <script>
 function dicas (dica) {
 switch (dica) {
-case '1':document.getElementById("msgs").innerHTML = "Informações da dica 1";break;
+case '1':document.getElementById("msgs").innerHTML = 
+"<h1 style='color:#ffffff;font-size:15px;text-align:center;'>Limpeza e atualização da cache: Ao entrar no navegador quando aparecer o fundo branco, imediatamente, segure o circulo até aparecer a tela \"Páginas usadas confrequência\", clique no botão OPTIONS, selecione \"Excluir tudo\",confirme, OPTIONS novamente, selecione \"Histórico de navegação\", clique em OPTIONS, e \"Limpar histórico de navegação\", confirme, volte a \"Páginas usadas com frequência\", mais uma vez OPTIONS, agora selecione \"Configurações\" e \"Excluir cookies\",confirme, depois \"Limpar dados de sites\" e confirme, volte e digite o endereço do host e adicione aos favoritos.";break;
 case '2':document.getElementById("msgs").innerHTML = "Informações da dica 2";break;
 case '3':document.getElementById("msgs").innerHTML = "Informações da dica 3";break;
 case '4':document.getElementById("msgs").innerHTML = "Informações da dica 4";break;
