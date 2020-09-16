@@ -90,15 +90,18 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button" onmouseover="dicas2('cu7')" onclick="load_webrte(); return false"> WebRTE </button>
 <button class="button" onmouseover="dicas2('cu8')" onclick="load_ps4debug(); return false"> PS4debug </button>
 <br><br>
-<a href="http://ps4trainer.com/Trainer/index.html" target="_blank"><button class="button"> Trainer Online </button></a>
+<a href="http://ps4trainer.com/Trainer/index.html" target="_blank" onmouseover="dicas2('cu15')"><button class="button"> Trainer On </button></a>
 <button class="button" onmouseover="dicas2('cu9')" onclick="load_todex(); return false"> ToDEX </button>
-<button class="button" onmouseover="dicas2('cu10')" onclick="load_historyblock(); return false"> History Blocker </button>
-<button class="button" onmouseover="dicas2('cu11')" onclick="load_updatesdisable(); return false"> Disable Updates </button>
-<button class="button" onmouseover="dicas2('cu12')" onclick="load_updatesenable(); return false"> Enable Updates </button>
+<button class="button" onmouseover="dicas2('cu10')" onclick="load_historyblock(); return false"> Hist. Blocker </button>
+<button class="button" onmouseover="dicas2('cu11')" onclick="load_updatesdisable(); return false"> Disable Upd </button>
+<button class="button" onmouseover="dicas2('cu12')" onclick="load_updatesenable(); return false"> Enable Upd </button>
 <button class="button" onmouseover="dicas2('cu13')" onclick="load_dbBackup(); return false"> DB Backup </button>
 <button class="button" onmouseover="dicas2('cu14')" onclick="load_dbRestore(); return false"> DB Restore </button>
 <br><br>
-<button class="button" onclick="load_fanthresh(); return false"> <font size=2px>temperatura alvo<br> <font size=1px>(Padrão é <font color="#ee596f">79&#176;C)</font></font><font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"></select><font size=5px>&#176;C</font>
+<button class="button" onmouseover="dicas2('cu17')" onclick="load_SD_Backup(); return false"> Save Backup </button>
+<button class="button" onmouseover="dicas2('cu18')" onclick="load_SD_Restore(); return false"> Save Restore </button>
+<button class="button" onmouseover="dicas2('cu19')" onclick="load_avatarDumper(); return false"> Avatar </button>
+<button class="button"  onmouseover="dicas2('cu16')" onclick="load_fanthresh(); return false"> <font size=2px>temp. alvo</font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"></select><font size=5px>&#176;C</font>
 <script>
 for(var i=35; i<=80; i++){
     var select = document.getElementById("tempC");
@@ -144,20 +147,25 @@ case '4':document.getElementById("msgs").innerHTML = "ainda será implementado";
 case '5':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
 case '6':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
 case 'e1':document.getElementById("msgs").innerHTML = "Exploit + HEN v2.1.3b (\"Leeful\").";break;
-case 'cu1':document.getElementById("msgs").innerHTML = "Permite enviar arquivos .BIN para o PS4 pela porta 9021";break;
-case 'cu2':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu3':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu4':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu5':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu6':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu7':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu8':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu9':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu10':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu11':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu12':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu13':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case 'cu14':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
+case 'cu1':document.getElementById("msgs").innerHTML = "Permite enviar arquivos .BIN para o PS4 pela porta 9021.";break;
+case 'cu2':document.getElementById("msgs").innerHTML = "Permite gerenciar os arquivos do PS4 pelo computador (FileZilla).";break;
+case 'cu3':document.getElementById("msgs").innerHTML = "Versão 1.8 (Mugiwara). Para cópia de jogos via USB.";break;
+case 'cu4':document.getElementById("msgs").innerHTML = "Carrega o Linux via USB (2gb de gráficos)";break;
+case 'cu5':document.getElementById("msgs").innerHTML = "Transfere jogos do console para um hd externo (exFAT).";break;
+case 'cu6':document.getElementById("msgs").innerHTML = "Permite copiar o kernel do PS4 via USB.";break;
+case 'cu7':document.getElementById("msgs").innerHTML = "Para Gerenciamento de trapaças (Botão \"TRAINER ON\").";break;
+case 'cu8':document.getElementById("msgs").innerHTML = "Para modificações do sistema (PS4 Reaper, trofeis, outros).";break;
+case 'cu15':document.getElementById("msgs").innerHTML = "Link para o site ps4trainer.com";break;
+case 'cu9':document.getElementById("msgs").innerHTML = "Modo de depuração do console (teste de devkit).";break;
+case 'cu10':document.getElementById("msgs").innerHTML = "Desabilita a última página usada no navegador PS4.";break;
+case 'cu11':document.getElementById("msgs").innerHTML = "Desabilita as atualizações automáticas de firmware.";break;
+case 'cu12':document.getElementById("msgs").innerHTML = "Habilita as atualizações automáticas de firmware.";break;
+case 'cu13':document.getElementById("msgs").innerHTML = "Faz backup do banco de dados e os jogos instalados via USB.";break;
+case 'cu14':document.getElementById("msgs").innerHTML = "Restaura um backup do banco de dados e os jogos via USB.";break;
+case 'cu16':document.getElementById("msgs").innerHTML = "Permite escolher temperatura de alvo do PS4 (padrão 79°C).";break;
+case 'cu17':document.getElementById("msgs").innerHTML = "Faz um backup dos saves dos jogos via USB.";break;
+case 'cu18':document.getElementById("msgs").innerHTML = "Restaura um backup dos saves dos jogos via USB.";break;
+case 'cu19':document.getElementById("msgs").innerHTML = "USB com pasta Avatar_Inject. 1° é feito um backup (substitua) 2° ele restaura.";break;
 default:document.getElementById("msgs").innerHTML = "erro";
 }
 }
@@ -304,6 +312,27 @@ function load_dbRestore(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB Restore ...</h1>";
 LoadedMSG="DB Restore Loaded ✔";
 var script = document.createElement('script');script.src = "pl_dbRestore.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_SD_Backup(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Save Backup ...</h1>";
+LoadedMSG="Save Backup Loaded ✔";
+var script = document.createElement('script');script.src = "pl_SD_Backup.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_SD_Restore(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Save Restore ...</h1>";
+LoadedMSG="Save Restore Loaded ✔";
+var script = document.createElement('script');script.src = "pl_SD_Restore.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_avatarDumper(){
+msgs.innerHTML="<h1 style='color:#ee596f;font-size:25px;text-align:center;'>Carregando Dumper do Avatar ...</h1>";
+LoadedMSG="<h1 style='color:#6089f6;font-size:25px;text-align:center;'>Carregado Dumper do Avatar ✔</h1>";
+var script = document.createElement('script');script.src = "pl_avatarDumper.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 

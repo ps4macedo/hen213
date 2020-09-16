@@ -20,3 +20,6 @@ pl_ToDEX.js
 pl_WebRTE.js
 pl_fanthresh.js
 pl_ps4debug.js
+pl_SD_Backup.js
+pl_SD_Restore.js
+pl_avatarDumper.js
