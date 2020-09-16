@@ -48,8 +48,9 @@ height:25px;
 background-color: transparent;
 }
 </style>
-<body onload="pegarCheck()">
+<body onload="pegarCheck(); statusCache(); invisivel();">
 <br>
+<div class="invisivel">
 <h1 style='font-size:25px;text-align:center;'><u><font color="#49c179">EXPLOIT 6.72 V8</font></u>
 <br>
 <div class="double">
@@ -66,7 +67,7 @@ background-color: transparent;
 </div>
 <br>
 <div style="text-align:center"><font size="3" color="#6089f6"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="#ee596f"><b><span id=failCounter></span></b> Falha(s)</font></div>
-</h1>
+</div>
 <hr width="45%" size="1" color="#ff5757">
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"#ee596f\">" + Percent + "%</font>";}
@@ -76,6 +77,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 </head>
 <h1 id=msgs style='font-size:25px;text-align:center;color:#6089f6;'><font color="#ee596f">Desconecte todos os USB</font> antes do Jailbreak, depois pode conectar novamente.</font></h1>
 <hr width="45%" size="1" color="#ff5757">
+<div class="invisivel" style="text-align:center">
 <div style="text-align:center">
 <font size="3">Pressione o <font color="#ee596f"><b>CIRCULO PARA SAIR<b></font>.</font>
 </div>
@@ -124,6 +126,7 @@ tempC.value=70;
 </div>
 <br>
 <div align="right"><font size="3" color="white" face="Verdana, Geneva, sans-serif"><b>FAMACEDO</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div></font>
+</div>
 <script>
 function dicas (dica) {
 switch (dica) {
@@ -173,6 +176,29 @@ default:document.getElementById("msgs").innerHTML = "erro";
 function fora(){
 document.getElementById("msgs").innerHTML = "PS4 MENU JAILBREAK <font style='color:#ee596f;'>6.72</font>";
 }
+
+function invisivel() {
+  var appCache = window.applicationCache;
+  if(appCache.status == appCache.DOWNLOADING){
+    var elementos = document.querySelectorAll(".invisivel");	
+	for (var i = 0; i < elementos.length; i++) {
+		elementos[i].style.display = 'none';	   
+    }
+  }	
+}	
+function statusCache(){
+var appCache = window.applicationCache;
+switch (appCache.status) {
+  case appCache.UNCACHED:
+    document.getElementById("msgs2").innerHTML = "UNCACHED";
+    var elementos = document.querySelectorAll(".invisivel");	
+	for (var i = 0; i < elementos.length; i++) {
+		elementos[i].style.display = 'none';	   
+    }
+    break;
+};	
+}
+
 	
 function check() {
 var checkStatus = document.getElementById("auto").checked;
