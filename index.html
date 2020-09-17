@@ -116,12 +116,12 @@ tempC.value=70;
 </script>
 <br><br>
 <h1 style='font-size:25px;'><u><font color="#49c179">Dicas/Informações:</font></u>&nbsp
-<button id="d1" class="button" onclick="dicas('1')" onMouseOut="fora()" ; onmouseover="dicas2('1');">CACHE</button>
-<button id="d2" class="button" onclick="dicas('2')" onMouseOut="fora()" ; onmouseover="dicas2('2');">DICA 2</button>
-<button id="d3" class="button" onclick="dicas('3')" onMouseOut="fora()" ; onmouseover="dicas2('3');">DICA 3</button>
-<button id="d4" class="button" onclick="dicas('4')" onMouseOut="fora()" ; onmouseover="dicas2('4');">DICA 4</button>
-<button id="d5" class="button" onclick="dicas('5')" onMouseOut="fora()" ; onmouseover="dicas2('5');">DICA 5</button>
-<button id="d6" class="button" onclick="dicas('6')" onMouseOut="fora()" ; onmouseover="dicas2('6');">Informações</button>
+<button class="button" onclick="dicas('1')" onMouseOut="fora()" ; onmouseover="dicas2('1');">CACHE</button>
+<button class="button" onclick="dicas('2')" onMouseOut="fora()" ; onmouseover="dicas2('2');">USB</button>
+<button class="button" onclick="dicas('3')" onMouseOut="fora()" ; onmouseover="dicas2('3');">WWW</button>
+<button class="button" onclick="dicas('4')" onMouseOut="fora()" ; onmouseover="dicas2('4');">Novo dia</button>
+<button class="button" onclick="dicas('5')" onMouseOut="fora()" ; onmouseover="dicas2('5');">PK</button>
+<button class="button" onclick="dicas('6')" onMouseOut="fora()" ; onmouseover="dicas2('6');">Infors</button>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
 </div>
 <br>
@@ -132,11 +132,10 @@ function dicas (dica) {
 switch (dica) {
 case '1':document.getElementById("msgs").innerHTML = 
 "<h1 style='color:#ffffff;font-size:15px;text-align:center;'>Limpeza e atualização da cache: Ao entrar no navegador quando aparecer o fundo branco, imediatamente, segure o circulo até aparecer a tela \"Páginas usadas confrequência\", clique no botão OPTIONS, selecione \"Excluir tudo\",confirme, OPTIONS novamente, selecione \"Histórico de navegação\", clique em OPTIONS, e \"Limpar histórico de navegação\", confirme, volte a \"Páginas usadas com frequência\", mais uma vez OPTIONS, agora selecione \"Configurações\" e \"Excluir cookies\",confirme, depois \"Limpar dados de sites\" e confirme, volte e digite o endereço do host e adicione aos favoritos.";break;
-case '2':document.getElementById("msgs").innerHTML = "Informações da dica 2";break;
-case '3':document.getElementById("msgs").innerHTML = "Informações da dica 3";break;
-case '4':document.getElementById("msgs").innerHTML = "Informações da dica 4";break;
-case '5':document.getElementById("msgs").innerHTML = "Informações da dica 5";break;
-case '6':document.getElementById("msgs").innerHTML = "Informações";break;
+case '2':document.getElementById("msgs").innerHTML = "Desconecte todos os cabos USB, antes do desbloqueio.";break;
+case '3':document.getElementById("msgs").innerHTML = "Não entre mais no navegador após o desbloqueio.";break;
+case '4':document.getElementById("msgs").innerHTML = "Ao ligar pela primeira vez no dia, aguarde 2 minuto.";break;
+case '5':document.getElementById("msgs").innerHTML = "Seguidos KP, deslige totalmente e retire o cabo de força, por 10 minutos.";break;case '6':document.getElementById("msgs").innerHTML = "Informações";break;
 default:document.getElementById("msgs").innerHTML = "erro";
 }
 }
@@ -144,11 +143,10 @@ function dicas2 (dica) {
 switch (dica) {
 case '1':document.getElementById("msgs").innerHTML = 
 "Limpeza e Atualização da CACHE.";break;
-case '2':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case '3':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case '4':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case '5':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
-case '6':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
+case '2':document.getElementById("msgs").innerHTML = "Desconecte todos os cabos USB, antes do desbloqueio.";break;
+case '3':document.getElementById("msgs").innerHTML = "Não entre mais no navegador após o desbloqueio.";break;
+case '4':document.getElementById("msgs").innerHTML = "Ao ligar pela primeira vez no dia, aguarde 2 minuto.";break;
+case '5':document.getElementById("msgs").innerHTML = "Seguidos KP, deslige totalmente e retire o cabo de força, por 10 minutos.";break;case '6':document.getElementById("msgs").innerHTML = "ainda será implementado";break;
 case 'e1':document.getElementById("msgs").innerHTML = "Ativa Jailbreak + <font style='color:#ee596f;'>HEN v2.1.3b</font> (github do Leeful).";break;
 case 'cu1':document.getElementById("msgs").innerHTML = "Permite enviar arquivos .BIN para o PS4 pela porta 9021.";break;
 case 'cu2':document.getElementById("msgs").innerHTML = "Permite gerenciar os arquivos do PS4 pelo computador (FileZilla).";break;
