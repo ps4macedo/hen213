@@ -212,25 +212,13 @@ document.getElementById("msgs").innerHTML = "Auto HEN <font color=\"#ee596f\">DE
 }
 
 var checkStatusStorage = localStorage.getItem("auto");
-
-function contar(){
-var tempo = 30;
-var downloadTimer = setInterval(function(){
-  document.getElementById("msgs").innerHTML = "Na tentativa de <font color=\"#ee596f\">evitar KP</font>, o exploit vai ser executado em <font color=\"#ee596f\">" + tempo + "</font> segundos.";
-  tempo -= 1;
-  if(tempo <= -1){
-    clearInterval(downloadTimer);
-	load_exploit_HEN(); return false;
-  }
-}, 1000);
-}
 	
 function pegarCheck(){
 if (checkStatusStorage == 'true'){
 document.getElementById("auto").checked = true ; 
 document.getElementById('hen').style.display = 'none';
 document.getElementById('msgAuto').style.display = 'inline';
-contar(); return false;}
+load_exploit_HEN(); return false;}
 else{
 document.getElementById("auto").checked = false ;
 document.getElementById('hen').style.display = 'inline';
